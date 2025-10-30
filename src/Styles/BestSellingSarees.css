@@ -1,0 +1,102 @@
+/* Section Container */
+.best-sellings {
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Heading */
+.best-sellings h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #860f10;
+}
+
+/* Horizontal Scroll Layout */
+.best-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.best-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.best-grid::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.best-grid::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Card */
+.best-card {
+  flex: 0 0 280px;               /* consistent card width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Image Styling — fixed size box */
+.best-card img {
+  width: 280px;                  /* fixed width */
+  height: 350px;                 /* fixed height */
+  object-fit: cover;             /* crop edges to fill box */
+  object-position: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.best-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Saree Name */
+.best-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .best-card {
+    flex: 0 0 240px;
+  }
+
+  .best-card img {
+    width: 240px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .best-sellings h2 {
+    font-size: 2rem;
+  }
+
+  .best-card {
+    flex: 0 0 200px;
+  }
+
+  .best-card img {
+    width: 200px;
+    height: 260px;
+  }
+
+  .best-name {
+    font-size: 1rem;
+  }
+}

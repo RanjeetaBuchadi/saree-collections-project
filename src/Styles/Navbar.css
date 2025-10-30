@@ -1,0 +1,153 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #fff; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  color: #e11d48;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+   padding-left: 40px;
+ /* padding-right: 900px; */
+  /* margin:0;
+  padding: 0;*/
+  flex-shrink:0;
+  padding-bottom: 40px; 
+}
+
+.nav-links a {
+  text-decoration:dotted;
+  color:#860f10;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color:#860f10;
+}
+
+.navbar button {
+  background-color:#860f10;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.navbar button:hover {
+  opacity: 0.85;
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.logo {
+  height: 100px;
+  width: 105px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: auto;
+  padding-top: 0px;
+  padding-bottom: 38px;
+  padding-left: 20px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between search and icons */
+  /* padding-right: 50px; */
+  margin-left: -80px;
+  margin-right: 50px;
+  padding-bottom: 30px;
+}
+/* 🔍 Search Bar Styles */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 40px; /* you can adjust or remove this later */
+}
+
+/* Icon inside input */
+.search-icon {
+  position: absolute;
+  left: 12px;               /* distance from the left edge inside input */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #860f10;           /* matches your theme color */
+  font-size: 16px;
+  pointer-events: none;     /* allows clicking the input through the icon */
+}
+
+/* Input box */
+.search-input {
+  padding: 10px 16px 10px 38px; /* 👈 extra left padding for icon space */
+  border: 1px solid #860f10;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 350px;
+  background-color: #f9f9f9;
+}
+
+/* Expand slightly when focused */
+.search-input:focus {
+  width: 300px;
+  border-color: #c47a1a;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(196, 122, 26, 0.3);
+}
+
+/* Placeholder text */
+.search-input::placeholder {
+  color: #999;
+  font-size: 17px;
+}
+/* Icons (Profile + Cart) */
+.icon-container {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 20px;
+}
+
+.nav-icon {
+  font-size: 22px;
+  color: #860f10;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.nav-icon:hover {
+  transform: scale(1.2);
+  color: #c47a1a;
+}

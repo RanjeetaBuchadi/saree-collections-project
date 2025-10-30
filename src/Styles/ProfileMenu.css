@@ -1,0 +1,91 @@
+.profile-container {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+/* Profile Icon */
+.profile-icon img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #860f10;
+  transition: transform 0.2s;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.05);
+}
+
+/* Dropdown Box */
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  padding: 1rem;
+  z-index: 100;
+  text-align: center;
+}
+
+/* Show dropdown on hover */
+.profile-container:hover .profile-dropdown {
+  display: block;
+}
+
+/* Text styling */
+.profile-dropdown .greeting {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.profile-dropdown .welcome {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.profile-dropdown .welcome span {
+  color: #860f10;
+  font-weight: bold;
+}
+
+/* Signup Button */
+.signup-btn {
+  background-color: #860f10;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.8rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.signup-btn:hover {
+  opacity: 0.9;
+}
+
+/* Links */
+.dropdown-link {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  transition: color 0.2s;
+}
+
+.dropdown-link:hover {
+  color: #860f10;
+}
+
+.dropdown-link.delete {
+  color: #c62828;
+}

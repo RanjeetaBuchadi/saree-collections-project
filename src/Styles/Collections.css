@@ -1,0 +1,187 @@
+/* ===============================
+   🌸 COMMON COLLECTIONS PAGE LAYOUT
+   For Cotton, Silk, Handloom, Party Wear Sarees
+================================= */
+
+/* Main Page Layout */
+.cotton-page,
+.silk-page,
+.handloom-page,
+.partywear-page {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fffdfd;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -------------------------------
+   🧭 SIDEBAR SECTION
+-------------------------------- */
+.sidebar {
+  width: 260px;
+  background: #fdf8f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar h3 {
+  font-size: 1.25rem;
+  color: #8b0000;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+/* Filter List */
+.filter-list,
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.filter-list li {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+
+.filter-list li:hover {
+  background-color: #f5dada;
+}
+
+.filter-list li.active {
+  background-color: #8b0000;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #8b0000;
+}
+
+/* Category Section */
+.category-item {
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.category-link:hover {
+  background-color: #f0dada;
+}
+
+.category-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* -------------------------------
+   🎀 MAIN CONTENT AREA
+-------------------------------- */
+.content {
+  flex: 1;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: #8b0000;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* -------------------------------
+   🧵 SAREE GRID STYLING
+-------------------------------- */
+.saree-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.saree-card {
+  width: 220px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.saree-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.25);
+}
+
+.saree-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* -------------------------------
+   🌿 RESPONSIVE DESIGN
+-------------------------------- */
+@media (max-width: 992px) {
+  .cotton-page,
+  .silk-page,
+  .handloom-page,
+  .partywear-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .saree-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .saree-card {
+    width: 160px;
+    height: 240px;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar h3 {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,27 @@
+/* Footer */
+footer {
+  background: linear-gradient(to right, #fff,#F5D695); /* full warm gradient */
+  color: #222; /* readable text color */
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+  position: relative;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+footer a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: #860f10;
+  transition: color 0.3s ease;
+}
