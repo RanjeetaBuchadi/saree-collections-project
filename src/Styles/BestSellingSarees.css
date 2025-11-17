@@ -1,102 +1,121 @@
 /* Section Container */
 .best-sellings {
-  padding-top: 30px;
+  padding: 40px 2rem;
   text-align: center;
+  background: #fffdf5;
+  font-family: "Poppins", sans-serif;
 }
-
-/* Heading */
 .best-sellings h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #860f10;
+  color:#860f10;
 }
 
-/* Horizontal Scroll Layout */
+/* Grid Layout */
 .best-grid {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  padding: 0 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-}
-
-.best-grid::-webkit-scrollbar {
-  height: 8px;
-}
-
-.best-grid::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-.best-grid::-webkit-scrollbar-thumb:hover {
-  background: #aaa;
+  justify-items: center;
 }
 
 /* Card */
 .best-card {
-  flex: 0 0 280px;               /* consistent card width */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  width: 100%;
+  max-width: 260px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Image Styling — fixed size box */
+/* Hover */
+.best-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border-color: #b87171;
+  background-color: #fffdf8;
+}
+
+/* ✅ Image */
 .best-card img {
-  width: 280px;                  /* fixed width */
-  height: 350px;                 /* fixed height */
-  object-fit: cover;             /* crop edges to fill box */
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
   object-position: center;
-  border-radius: 10px;
+  display: block;
+  background-color: #fff;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover Effect */
-.best-card img:hover {
-  transform: scale(1.05);
+/* No zoom on hover */
+.best-card:hover img {
+  transform: none;
 }
 
-/* Saree Name */
-.best-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-  margin: 0;
+/* ✅ Content */
+.best-card-content {
+  padding: 10px 8px 12px;
   text-align: center;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .best-card {
-    flex: 0 0 240px;
-  }
+/* ✅ Title / Heading */
+.best-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6b2e1f; /* rich brown tone */
+  margin-bottom: 8px;
+}
 
+/* Description */
+.best-desc {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* ✅ Price Section */
+.best-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #860f10;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.discount-price {
+  color: #860f10;
+  font-weight: 700;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
   .best-card img {
-    width: 240px;
-    height: 300px;
+    height: 200px;
   }
 }
 
 @media (max-width: 768px) {
-  .best-sellings h2 {
-    font-size: 2rem;
-  }
-
-  .best-card {
-    flex: 0 0 200px;
-  }
-
   .best-card img {
-    width: 200px;
-    height: 260px;
+    height: 180px;
   }
+  .best-card {
+    max-width: 220px;
+  }
+}
 
-  .best-name {
-    font-size: 1rem;
+@media (max-width: 480px) {
+  .best-card img {
+    height: 160px;
+  }
+  .best-card {
+    max-width: 200px;
   }
 }
